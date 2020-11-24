@@ -40,7 +40,7 @@
 /* Basic information exposed publicly */
 #define SMEXT_CONF_NAME			"Unwinder"
 #define SMEXT_CONF_DESCRIPTION	"Expose full stack trace data to plugins"
-#define SMEXT_CONF_VERSION		"0.0.1"
+#define SMEXT_CONF_VERSION		"1.0.0"
 #define SMEXT_CONF_AUTHOR		"nosoop"
 #define SMEXT_CONF_URL			"https://github.com/nosoop/SMExt-Unwind"
 #define SMEXT_CONF_LOGTAG		"SAMPLE"
@@ -60,7 +60,7 @@
 
 /** Enable interfaces you want to use here by uncommenting lines */
 //#define SMEXT_ENABLE_FORWARDSYS
-//#define SMEXT_ENABLE_HANDLESYS
+#define SMEXT_ENABLE_HANDLESYS
 //#define SMEXT_ENABLE_PLAYERHELPERS
 //#define SMEXT_ENABLE_DBMANAGER
 //#define SMEXT_ENABLE_GAMECONF
@@ -76,6 +76,6 @@
 //#define SMEXT_ENABLE_TEXTPARSERS
 //#define SMEXT_ENABLE_USERMSGS
 //#define SMEXT_ENABLE_TRANSLATOR
-#define SMEXT_ENABLE_ROOTCONSOLEMENU
+//#define SMEXT_ENABLE_ROOTCONSOLEMENU
 
 #endif // _INCLUDE_SOURCEMOD_EXTENSION_CONFIG_H_

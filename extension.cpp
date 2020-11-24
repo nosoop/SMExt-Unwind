@@ -41,10 +41,17 @@ CExtension g_Extension;		/**< Global singleton for extension's main interface */
 
 SMEXT_LINK(&g_Extension);
 
+CodeFrameIteratorHandler g_CodeFrameIteratorHandler;
+
 bool CExtension::SDK_OnLoad(char* error, size_t maxlength, bool late) {
 	sharesys->AddNatives(myself, g_UnwindNatives);
+	
+	g_CodeFrameIteratorType = g_pHandleSys->CreateType("CodeFrameIterator",
+			&g_CodeFrameIteratorHandler, 0, NULL, NULL, myself->GetIdentity(), NULL);
+	
 	return true;
 }
 
 void CExtension::SDK_OnUnload() {
+	g_pHandleSys->RemoveType(g_CodeFrameIteratorType, myself->GetIdentity());
 }

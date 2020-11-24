@@ -1,6 +1,7 @@
 # Unwind Extension for SourceMod
 
 A wrapper for `libunwind` to get the full stack trace from a plugin.
+<sub>coded over a three hour sprint I too am screaming</sub>
 
 Sometimes you want to empirically track something down which happens under certain conditions
 without dealing with `gdb`.
